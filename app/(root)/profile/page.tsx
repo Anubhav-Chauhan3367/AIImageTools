@@ -2,6 +2,7 @@ import { auth } from "@clerk/nextjs";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 
+import { Collection } from "@/components/shared/Collection";
 import Header from "@/components/shared/Header";
 import { getUserImages } from "@/lib/actions/image.actions";
 import { getUserById } from "@/lib/actions/user.actions";
@@ -50,7 +51,11 @@ const Profile = async ({ searchParams }: SearchParamProps) => {
       </section>
 
       <section className="mt-8 md:mt-14">
-        
+        <Collection
+          images={images?.data}
+          totalPages={images?.totalPages}
+          page={page}
+        />
       </section>
     </>
   );
