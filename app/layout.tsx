@@ -13,7 +13,7 @@ const IBMPlex = IBM_Plex_Sans({
 
 
 export const metadata: Metadata = {
-  title: "All stop Image Solutions",
+  title: "Artifize",
   description: "AI-powered image solutions",
 };
 export default function RootLayout({
